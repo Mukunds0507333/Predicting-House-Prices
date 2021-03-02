@@ -129,12 +129,12 @@ We'll compare the efficacy of our regression models using their R<sup>2</sup> sc
 
 ####  Ridge regression performs slightly better as it doesn't cancel elements out by labelling their coefficients to 0(like Lasso)
 #### Let's plot the actual values with our predicted values
-<img src ="files/pred.jpg" height = 20% width = 20%/>
+<img src ="files/pred.jpg" height = 80% width = 80%/>
 We can observe a strong linear relationship which is an indicator of good model accuracy
 
 # Results <a name="results"></a>
 We'll apply the inverse BoxCox transform to our target variable to make it easier to construe.
-<img src ="files/results.jpg" height = 20% width = 20%/>
+<br>
 
 The results of this project achieved a Root Mean Logarithmic Score 0.13286 ranking it in the top 20% of submissions.
 

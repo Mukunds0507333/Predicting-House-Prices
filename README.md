@@ -59,7 +59,8 @@ According to our scores, the p values of Log and Box-Cox Transformations are <b>
 
 #### Handling Missing Data
 
-We'll extract columns that have missing values 
+##### We'll extract columns that have missing values: 
+<br>
 <img src ="files/train_missingval.jpg" height = 20% width = 20%/>
 
 

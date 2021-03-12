@@ -4,7 +4,7 @@
 * [Introduction: Problem](#introduction)
 * [Data](#data)
 * [Exploratory Data Analysis](#analysis)
-* [Regression Modelling](#modelling)
+* [Regression modeling](#modeling)
 * [Results and Conclusion](#results)
 
 # Introduction: Problem<a name="introduction"></a>
@@ -121,7 +121,7 @@ Interestingly,  the Sale Price drops once we have more than 3 Garage Cars
 #### Once we have created our new features, we'll remove all superfluous features and proceed towards modeling
 --
 
-# Modelling <a name="modelling"></a>
+# Modeling <a name="modeling"></a>
 We'll split our training dataset into two; a training set and a validation set.
 <b> Regularization a.k.a desensitization is very useful in analysing datasets which have a lot of variables</b>
 

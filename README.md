@@ -11,7 +11,7 @@
 <b> House Prices: Advanced Regression Techniques</b>
 <br>
 The dataset for this project was acquired from Kaggle and it describes sales of individual residential properties in Ames, Iowa.
-A Continuous target variable entails that regression models be used for prediction.
+A Continuous target variable entails that regression models should be used for prediction.
 The dataset contains a gamut of attributes that have an impact on the price. We'll deploy standard data science procedures to select features as well as create new ones to subsume all factors pertinent to predicting our target variable-The Sale Price. <br> 
 Certain features will also be converted from an amorphous state to a more optimized form suited for regression. The final predictions will then be submitted to Kaggle.
 <img src = "files/Housing-Prices.jpg" height = 50% width = 100%>
@@ -19,11 +19,11 @@ Certain features will also be converted from an amorphous state to a more optimi
 --
 
 # Data<a name="data"></a>
-The dataset for this project hasn't been vitiated; however, it does contain missing data.
+
 <img src = "files/Dataset.jpg" height = 50% width = 50%>
 
 
-We have 81 columns in this dataset; one for the target variable, one for ID, and 79 for attributes. Not exactly a glut compared to the number of attributes present in corporate data but enough to generate meaningful inferences. 
+We have 81 columns in this dataset; one for the target variable, one for ID, and 79 for attributes. Not exactly a glut of attributes but enough to generate meaningful inferences. 
 
 We'll analyze the target variable by generating a histogram.
 <img src ="files/NormalDist.jpg" height = 50% width = 50%/>
@@ -46,7 +46,7 @@ We'll apply the following three transformations :
 <img src ="files/NormalTransform.jpg" height = 80% width = 70%/>
 
 Interpreting the D'Agostino K^2 score:<br>
-This test outputs a "p-value". The larges the p-value, the closer the distribution is to normal.
+The larger the p-value, the closer the distribution is to normal.
 
 We will take a <b>small sample</b> of each distribution as the test detects even minor deviations in very large samples.
 
@@ -71,7 +71,7 @@ We'll be austere with the amount of missing data that is permissible by removing
 <img src ="files/col_missing.jpg" height = 20% width = 20%/>
 
 ## We'll impute the remaining missing values using a predefined function
-We'll define a function to handle missing values and pass the names of columns containing missing values as the argument
+We'll define a function to handle missing values and pass the names of columns containing missing values as the argument.
 
 #### Transforming predictor variables for optimal model performance
 We'll extract continuous predictor variables that are skewed and apply a log transform to make them more normally distributed.
@@ -85,6 +85,7 @@ Next, we'll one hot encode categorical variables
 The number of attributes seems involved; however, we'll only consider those attributes that have a siginificant correlation and remove any superfluous attributes using a heatmap
 <img src ="files/heatmap.jpg" height = 80% width = 50%/>
 <br>
+
 Let's select features which have a correlation magnitude <b>greater</b> than 0.6
 <br>
 <img src ="files/heatmap2.jpg" height = 80% width = 50%/>
@@ -99,16 +100,17 @@ There's clearly a premium on houses that were built more recently and have a hig
 We'll create a new attribute to subsume this observation.
 We can also divide the overall quality by the lot area to get a term that represents the overall quality per sqft. <br>
 
+<br>
 
 Let's take a closer look at the correlation of Total Basement Square ft. and Ground floor Living Area
 <img src ="files/TbGr.jpg" height = 80% width = 80%/>
 <br>
 We'll combine these two features to create a new feature since they are highly correlated
 
-We can also combine Total Basement Square Ft, 1st and 2nd floor Square Ft to create a new variable which summarises all three. <br>
+We can also combine Total Basement Square Ft, 1st and 2nd floor Square Ft to create a new variable which summarizes all three. <br>
 <img src ="files/SquareFt.jpg" height = 80% width = 80%/>
 <br>
-Let's take a look at the relationship between number of cars and garage area on price
+Let's take a look at the relationship between the number of cars and garage area on price
 <br>
 <img src ="files/car.jpg" height = 80% width = 80%/>
 
@@ -120,11 +122,12 @@ Interestingly,  the Sale Price drops once we have more than 3 Garage Cars
 
 # Modelling <a name="modelling"></a>
 We'll split our training dataset into two; a training set and a validation set.
-<b> Regularization a.k.a desensitization is very useful in analysing datasets which have a lot of variables</b> <br>
+<b> Regularization a.k.a desensitization is very useful in analysing datasets which have a lot of variables</b>
 
-    We will model our raw data using Linear, Ridge, and Lasso Regression using a pipeline.
-    
-We'll compare the efficacy of our regression models using their R<sup>2</sup> scores
+##### We will model our raw data using Linear, Ridge, and Lasso Regression.
+<br>
+
+We'll compare the efficacy of our regression models using their R<sup>2</sup> scores.
 <br>
 <img src ="files/r2.jpg" height = 30% width = 30%/>
 

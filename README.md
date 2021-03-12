@@ -12,8 +12,9 @@
 <br>
 The dataset for this project was acquired from Kaggle and it describes sales of individual residential properties in Ames, Iowa.
 A Continuous target variable entails that regression models should be used for prediction.
-The dataset contains a gamut of attributes that have an impact on the price. We'll deploy standard data science procedures to select features as well as create new ones to subsume all factors pertinent to predicting our target variable-The Sale Price. <br> 
-Certain features will also be converted from an amorphous state to a more optimized form suited for regression. The final predictions will then be submitted to Kaggle.
+The dataset contains a gamut of attributes that have an impact on the price. We'll deploy standard data science procedures to select features as well as create new ones to subsume all factors pertinent to predicting our target variable-The Sale Price. <br> Certain features will also be converted from an amorphous state to a more optimized form suited for regression. The final predictions will then be submitted to Kaggle.
+
+<br>
 <img src = "files/Housing-Prices.jpg" height = 50% width = 100%>
 
 --
@@ -124,10 +125,7 @@ Interestingly,  the Sale Price drops once we have more than 3 Garage Cars
 We'll split our training dataset into two; a training set and a validation set.
 <b> Regularization a.k.a desensitization is very useful in analysing datasets which have a lot of variables</b>
 
-##### We will model our raw data using Linear, Ridge, and Lasso Regression.
-<br>
-
-We'll compare the efficacy of our regression models using their R<sup>2</sup> scores.
+##### We will model our raw data using Linear, Ridge, and Lasso Regression and we'll compare the efficacy of each model using their R<sup>2</sup> scores.
 <br>
 <img src ="files/r2.jpg" height = 30% width = 30%/>
 
